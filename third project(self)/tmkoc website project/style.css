@@ -1,0 +1,372 @@
+/* Header */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 11vh;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgb(250, 244, 244);
+    
+}
+
+.page-logo {
+    margin-left: 47px;
+}
+
+.items {
+    display: flex;
+}
+
+.items p {
+    margin: 26px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+
+    color: #f15e22;
+
+
+}
+
+.page-logo img {
+    height: 8vh;
+}
+
+.H-icons {
+    display: flex;
+    margin-right: 52px;
+
+}
+
+.H-icons i {
+    margin-right: 22px;
+    color: #f15e22;
+    font-size: 22px;
+    cursor: pointer;
+
+
+}
+
+header {
+    position: fixed;
+    z-index: 415;
+    top: 0;
+    width: 100%;
+
+}
+
+/* Main-website */
+.hero-image {
+    background-image: url(assets/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    margin-top: 72px;
+    margin-bottom: 90px;
+
+}
+
+.hero-image h2 {
+    text-align: center;
+    padding-top: 545px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 90px;
+}
+
+.card1 img {
+    border-radius: 27px;
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.card2 img {
+    border-radius: 27px;
+    margin-left: 40px;
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.card3 img {
+    border-radius: 27px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.card1 p {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: larger;
+    cursor: pointer;
+
+}
+
+.cardC p {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: larger;
+    margin-left: 40px;
+    cursor: pointer;
+
+}
+
+/* shop interface */
+
+.soda-shop-H {
+    margin-top: 60px;
+    display: inline-block;
+    padding: 5px 26px;
+    border: 1px solid black;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-left: 575px;
+    margin-bottom: 23px;
+    cursor: pointer;
+
+}
+
+.soda-shop-imgs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop img {
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.soda-shop p {
+    display: flex;
+}
+
+.soda-shop-writings {
+    padding-top: 10px;
+    display: flex;
+    font-size: 11px;
+    justify-content: space-around;
+    cursor: grab;
+}
+
+.tk {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.img-1 {
+    margin-left: 20px;
+}
+
+.img-2 {
+    margin-right: 20px;
+}
+
+.img-4 {
+    margin-right: 17px;
+}
+
+.img-5 {
+    margin-right: 20px;
+}
+
+
+/* Footer */
+.f1 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24vh;
+    font-size: 22px;
+    background-color: #f8f3eb;
+    font-weight: 600;
+
+}
+
+.f2{
+    height:62vh;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+.straight-line1{
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    height: 1px;   
+    background-color: #1a1818;
+    width: 1270px;
+}
+.straight-line2{
+    position: absolute;
+    top: 360px;
+    height: 1px;    
+    background-color: #1a1818;
+    width: 100%;
+}
+.inform1{
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    color:white;
+}
+.inform1 ul li{
+    text-decoration: none;
+    font-size: 11px;
+    list-style: none;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.inform1 p{
+    color: #efb34c;
+    padding-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.inform2{
+    position: absolute;
+    top: 120px;
+    left: 390px;
+    color:white;
+}
+.inform2 ul li{
+    text-decoration: none;
+    font-size: 11px;
+    list-style: none;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+.inform2 p{
+    color: #efb34c;
+    padding-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.inform3{
+    position: absolute;
+    top: 120px;
+    left: 790px;
+    color:white;
+}
+.inform3 p{
+    color: #efb34c;
+    padding-bottom: 10px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.inform3 ul li{
+    text-decoration: none;
+    font-size: 11px;
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.inform3 hr{
+    width: 410px;
+    cursor: pointer;
+}
+
+.copyright{
+    position: absolute;
+    top:370px;
+    font-size: 11px;
+    font-weight: 700;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+.icon-arrow{
+    position: absolute;
+    top: 40px;
+    left: 388px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    font-size:20px;
+    cursor: pointer;
+}
+.icon-s1{
+    position: absolute;
+    top: 120px;
+    border: 1px solid white;
+    border-radius: 1000000px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.icon-s2{
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    border: 1px solid white;
+    border-radius: 1000000px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+.icon-s3{
+    position: absolute;
+    top: 120px;
+    left: 87px;
+    border: 1px solid white;
+    border-radius: 1000000px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.icon-s4{
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    border: 1px solid white;
+    border-radius: 1000000px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+
+body {
+    margin-top: 11vh;
+}

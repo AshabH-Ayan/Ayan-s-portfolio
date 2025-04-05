@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Mohammad Ashab Hossain Ayan</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #000000;
+      /* Navy Blue */
+      --secondary: #4facc5;
+      /* White */
+      --bg-dark: #1d7392;
+      /* Dark Blue-Grey */
+      --glass: rgba(0, 110, 235, 0.06);
+      --text-light: #ff0000;
+      /* Light Grayish White */
+      --accent: #000000;
+      /* Deep Navy */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #ffffff, #c1d6f0, #7f9ca6, #34495e);
+
+
+      ;
+
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 30px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+      padding: 3rem;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      width: 100%;
+      animation: fadeIn 1s ease-out;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .image-container {
+      flex-shrink: 0;
+    }
+
+    .image-container img {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 0px solid var(--primary);
+      box-shadow: 0 0 30px rgba(40, 104, 234, 0.535);
+      animation: float 6s ease-in-out infinite;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .info {
+      flex: 1 1 500px;
+      min-width: 260px;
+    }
+
+    .info h1 {
+      font-size: 3rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      /* Deprecated but you can still use it as fallback */
+      color: transparent;
+      background-clip: text;
+      /* Standard property for most browsers */
+      position: relative;
+      display: inline-block;
+    }
+
+    .info p {
+      margin-bottom: 1.3rem;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(38, 116, 176, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .info h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-container img {
+        width: 260px;
+        height: 260px;
+      }
+
+      .info p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 370px) {
+      .image-container img {
+        width: 220px;
+        height: 220px;
+        justify-content: center;
+        padding: 0px;
+        margin: 0;
+      }
+
+      .info h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .image-container img {
+        position: relative;
+        left: -10px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .image-container img {
+        position: relative;
+        left: -20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="image-container">
+      <img src="assets/p1.png" alt="Profile Photo" />
+    </div>
+    <div class="info">
+      <h1>Hi, I’m Ayan</h1>
+      <p>Hello! I’m <span class="highlight">Mohammad Ashab Hossain Ayan</span>, a <span class="highlight">17-year-old
+          developer</span> from Bangladesh. I’ve been fascinated by tech and web development from a young age.</p>
+      <p>I specialize in creating stunning, responsive websites using <span class="highlight">HTML, CSS &
+          JavaScript</span>. I love turning creative ideas into clean, functional interfaces.</p>
+      <p>I'm also skilled in <span class="highlight">Python</span>, which I use for backend work, automation, and
+        exploring machine learning.</p>
+      <p>I bring a fresh perspective as a teenager, constantly exploring new tools and frameworks. I believe in creating
+        meaningful experiences through code.</p>
+      <p>If you’ve got a cool project or just want to connect—<span class="highlight">let’s talk!</span></p>
+
+      <a href="index.html" class="btn">← Back to Home</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

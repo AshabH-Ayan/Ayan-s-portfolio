@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayan's Portfolio</title>
+    <link rel="shortcut icon" href="assets/logo.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <style>
+        /* Minimal Popup Modal Styles */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 1rem;
+        }
+
+        #popup>div {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            position: relative;
+            max-width: 300px;
+            width: 90%;
+        }
+
+        #popup p {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        #popup span#close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .popup-content {
+            background: #fff;
+            color: #000;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        #notification {
+            visibility: hidden;
+            position: fixed;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%, -50%);
+            background-color: #fff;
+            color: #000000;
+            padding: 10px 20px;
+            width: 170px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10000000000000000000000;
+        }
+
+        @media (max-width: 800px) {
+            #notification {
+                display: block;
+                visibility: visible;
+                text-align: center;
+            }
+        }
+
+        @keyframes slideFromTop {
+    from {
+        transform: translateX(-50%) translateY(-30px); /* Keep X centering */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0); /* Keep X centering */
+        opacity: 1;
+    }
+}
+
+        #notification.show {
+            animation: slideFromTop 0.5s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="main">
+        <header>
+            <div class="header">
+                <div class="logo-container">Ashab Hossain</div>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn"><i class="fa-solid fa-bars icon1"></i></label>
+                <div class="items">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="about.html" target="_blank">About</a></li>
+                        <li><a href="" class="coming-soon">Services</a></li>
+                        <li><a href="" class="coming-soon">Experience</a></li>
+
+                    </ul>
+                    <button id="theme-switch"><i class="fa-solid fa-moon-stars"></i></button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="hero-text">
+                <div class="f">
+                    <p class="H">Hi, I'm </p>
+                    <span class="cl"></span>
+                </div>
+                <div class="all-texts">
+                    <p class="b">A passionate Python Developer & Frontend Developer</p>
+                    <p class="b">dedicated to crafting efficient, scalable, and visually</p>
+                    <p class="b">appealing web applications. I specialize in building</p>
+                    <p class="b">seamless user experiences with modern technologies.</p>
+                </div>
+                <div class="links1">
+                    <a href="https://www.facebook.com/ashab.hossain.ayan" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mohammad_ashab_hossain?igsh=YzljYTk1ODg3Zg==" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/AshabH-Ayan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.link/1qq2zs" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="buttons">
+                    <a href="#projects" class="P">Projects</a>
+                    <a href="#skills" class="S">Skills</a>
+                    <a href="#c" class="C">Contact</a>
+                </div>
+                <div class="hero-image"></div>
+            </div>
+            <section id="projects">
+                <div class="projects-container">
+                    <p class="project-h">Projects</p>
+                    <div class="projects">
+                        <div class="p1 amazon q">
+                            <button onclick="window.open('second website/index.html', '_blank')">Amazon</button>
+                        </div>
+                        <div class="p2 clothing-store q">
+                            <button onclick="window.open('tmkoc website project/index.html', '_blank')">Clothing
+                                Shop</button>
+                        </div>
+                        <div class="p3 blank q">
+                            <button onclick="window.open('third website/index.html', '_blank')">
+                                <div class="n">OnMeal</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <p class="skills-h">Skills</p>
+                <div class="skills">
+                    <div class="s s1"><button>Html</button></div>
+                    <div class="s s2"><button>Css</button></div>
+                    <div class="s s3"><button>Python</button></div>
+                    <div class="s s4"><button>Javascript</button></div>
+                </div>
+            </section>
+            <section id="c">
+                <div class="c">
+                    <div class="contact">
+                        <p>Contact</p>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="form">
+                            <input type="hidden" name="access_key" value="3f8ac042-ae62-421e-bc85-68c1097ba074">
+                            <div class="name"><input type="text" name="name" placeholder="Name" required></div>
+                            <div class="email"><input type="email" name="email" placeholder="E-mail" required></div>
+                            <div class="msg"><textarea name="message" placeholder="Type Message" required></textarea>
+                            </div>
+                            <div class="submit"><input type="submit" value="submit"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="l links">
+                    <a href="https://www.facebook.com/ashab.hossain.ayan" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mohammad_ashab_hossain?igsh=YzljYTk1ODg3Zg==" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/AshabH-Ayan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.link/1qq2zs" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <hr class="h">
+            <p class="copyright">&copy; 2025 ayan's portfolio. All rights reserved</p>
+        </footer>
+    </div>
+
+    <!-- Minimal Popup Modal -->
+    <div id="popup">
+        <div>
+            <span id="close"
+                style="position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer;">&times;</span>
+            <p>Coming Soon!</p>
+            <p>The page is under development,please comeback later.</p>
+        </div>
+    </div>
+    <div id="notification" style="display: flex; justify-content: center;">
+        <p>Coming soon</p>
+        <!-- <p>please come back later</p> -->
+    </div>
+    <script>
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        var typed = new Typed(".cl", {
+            strings: ["Ayan", "a Developer", "a programmer", "a Designer"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+
+        var checkBox = document.getElementById("check");
+        var body = document.body;
+
+        checkBox.addEventListener("change", function () {
+            if (checkBox.checked) {
+                body.classList.add("no-scroll");
+            } else {
+                body.classList.remove("no-scroll");
+            }
+        });
+
+        var darkmode = localStorage.getItem("darkmode");
+        var themeswitch = document.getElementById("theme-switch");
+
+        function enabledark() {
+            document.body.classList.add("darkmode");
+            localStorage.setItem("darkmode", "active");
+        }
+
+        function disabledark() {
+            document.body.classList.remove("darkmode");
+            localStorage.setItem("darkmode", "inactive");
+        }
+
+        if (darkmode === "active") {
+            enabledark();
+        }
+
+        themeswitch.addEventListener("click", function () {
+            if (document.body.classList.contains("darkmode")) {
+                disabledark();
+            } else {
+                enabledark();
+            }
+        });
+
+        var comingSoonLinks = document.querySelectorAll("a.coming-soon");
+        var popup = document.getElementById("popup");
+        var notification = document.getElementById("notification");
+        var closeBtn = document.getElementById("close");
+        popup.style.display = "none";
+        notification.style.display = "none";
+
+        comingSoonLinks.forEach(function (link) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                if (window.innerWidth <= 800) {
+                    // Show notification popup on small screen
+                    notification.classList.add("show");
+                    notification.style.visibility = "visible";
+                    notification.style.display = "block";
+
+                    // Auto-hide after 3 seconds
+                    setTimeout(function () {
+                        notification.classList.remove("show");
+                        notification.style.visibility = "hidden";
+                        notification.style.display = "none";
+                    }, 3000);
+                } else {
+                    // Show modal popup for larger screens
+                    popup.style.display = "flex";
+                }
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        window.addEventListener("click", function (e) {
+            if (e.target === popup) {
+                popup.style.display = "none";
+            }
+        });
+
+        setTimeout(function () {
+            document.getElementById("notification").style.display = "none";
+        }, 3000);
+
+    </script>
+</body>
+
+</html>
